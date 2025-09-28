@@ -33,9 +33,9 @@ def main():
     states = run_n_steps(state, key_rollout, rollout_length)
     print(f"Completed {rollout_length} steps")
 
-    state_sequence = []
-    for idx in range(rollout_length):
-        state_sequence.append(jtu.map(lambda x: x[idx], states))
+    state_sequence = [
+        jtu.map(lambda x: x[idx], states) for idx in range(rollout_length)
+    ]
 
     print("Creating rollout animation")
     env.animate(state_sequence, save_path=f"./animations/{VIDEO_FILENAME}")
