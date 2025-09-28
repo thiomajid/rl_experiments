@@ -1,4 +1,8 @@
-# Gymnax Rendering Issues
+# RL Experiments
+
+This repository contains my experiments with RL on various problems for learning purposes.
+
+## Gymnax Rendering Issues
 
 Rendering issues in Gymnax can be solved by updating these two functions from this [gymnax file](.venv/lib/python3.12/site-packages/gymnax/visualize/vis_gym.py) to follow gymnasium's new API but also installing "gymnasium[classic_control]"
 
